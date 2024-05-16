@@ -32,9 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _loadBaggages() async {
-    final baggages = await _prefsService.getBaggages();
+    final updatedBaggages = await _prefsService.getBaggages();
     setState(() {
-      _baggages = baggages;
+      _baggages.clear();
+      _baggages.addAll(updatedBaggages);
     });
   }
 
