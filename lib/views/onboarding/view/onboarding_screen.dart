@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:travel_organiser/consts/app_colors.dart';
 import '../../../blocs/onboarding_cubit/onboarding_cubit.dart';
 import '../../../consts/app_text_styles/onboarding_text_style.dart';
 import '../../../util/app_routes.dart';
@@ -99,6 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ]),
                     const Spacer(),
                     ChosenActionButton(
+                      color: AppColors.blackColor.withOpacity(0.16),
                       onTap: _onActionButtonTap,
                       text: 'Get started',
                     ),

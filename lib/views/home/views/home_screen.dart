@@ -71,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Text('Laggage size (kg)', style: ConstructorTextStyle.subtitle),
               InputWidget(
                 controller: _capacityController,
+                keyboardType: TextInputType.number,
               ),
               SizedBox(
                 height: 6,
@@ -187,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: double.infinity,
-                height: size.height * 0.43,
+                height: size.height * 0.45,
                 decoration: BoxDecoration(
                   color: AppColors.blackColor.withOpacity(0.06),
                   borderRadius: BorderRadius.circular(15.0),
@@ -217,6 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 6.0),
                       child: ChosenActionButton(
+                        color: AppColors.blackColor.withOpacity(0.06),
                         text: 'Add baggage',
                         onTap: () {
                           _addBaggage();

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_organiser/consts/app_text_styles/home_screen_text_style.dart';
@@ -61,9 +62,19 @@ class BaggageItemWidget extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             baggage.things.isEmpty
-                ? const Text(
-                    'You need to add things to your baggage.',
-                    style: HomeScreenTextStyle.title,
+                ? Row(
+                    children: [
+                      SvgPicture.asset('assets/icons/warning.svg'),
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Flexible(
+                        child: const Text(
+                          'You need to add things to your baggage.',
+                          style: HomeScreenTextStyle.warning,
+                        ),
+                      ),
+                    ],
                   )
                 : ListView.builder(
                     shrinkWrap: true,

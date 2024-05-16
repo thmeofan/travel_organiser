@@ -9,7 +9,12 @@ class HomeScreenTextStyle {
     fontWeight: FontWeight.w500,
     color: Colors.white,
   );
-
+  static const TextStyle warning = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16.0,
+    fontWeight: FontWeight.w300,
+    color: Colors.white,
+  );
   static TextStyle address = TextStyle(
     fontFamily: 'Inter',
     fontSize: 14.0,
